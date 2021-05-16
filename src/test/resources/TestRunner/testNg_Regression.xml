@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TTest Automation Tutorials Ninja" parallel="tests" thread-count="2">
+
+<listeners>
+<listener class-name="com.qa.hubspot.testlisteners.ExtentReportListener"/>
+
+<listener class-name="com.qa.hubspot.testlisteners.TestAllureListener"/>
+
+</listeners>
+ <test name="LoginPage Test">  
+ <parameter name="browser" value="chrome"/>
+  <classes>
+     <class name="com.qa.hubspot.tests.LoginPageTest"/>
+ </classes>
+ </test>
+
+<test name="AccountPage Test">  
+ <parameter name="browser" value="chrome"/>
+  <classes>
+     <class name="com.qa.hubspot.tests.AccountsPageTest"/>
+ </classes>
+ </test>
+ <!-- <test name="ProductInfoPage Test">  
+  <classes>
+     <class name="com.qa.hubspot.tests.ProductsInfoPageTest"> </class>
+ </classes>
+ </test> -->
+ 
+</suite>
